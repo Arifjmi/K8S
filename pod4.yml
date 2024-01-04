@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: portpod
+  annotations:
+    description: This file belongs to expose port
+spec:
+  containers:
+    - name: c1
+      image: httpd
+      command: ["/bin/bash", "-c", "while true; do echo hello; done"]
+      ports:
+        - containerPort: 80
+
