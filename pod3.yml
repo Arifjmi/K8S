@@ -1,0 +1,15 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: environmentpod(pod name)
+  annotations:
+    describe: This environment variable file
+spec:
+  containers:
+    - name: c1(container name)
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo Hello everyone; done"]
+      env:
+        - name: MYNAME
+          value: Arif
+
