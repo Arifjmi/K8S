@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pod3(pod name)
+  annotations:
+    description: This is my first mainfest
+spec:
+  containers:
+    - name: c3(container name)
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo Arif; done"]
+
