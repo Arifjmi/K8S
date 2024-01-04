@@ -1,0 +1,15 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pod4(pod name)
+  annotations:
+    description: This is one pod and two container file
+spec:
+  containers:
+    - name: c1(container name)
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo Hello; done"]
+    - name: c2(container name)
+      image: nginx
+      command: ["/bin/bash", "-c", "while true; do echo Hello; done"]
+
